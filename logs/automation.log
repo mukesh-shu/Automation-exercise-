@@ -1,0 +1,9 @@
+2025-12-23 05:35:46:INFO:*****************test_verify_hompage******************
+2025-12-23 05:35:50:INFO:*****************test_click_signup_page******************
+2025-12-23 05:35:56:INFO:*****************test_enter user details******************
+2025-12-23 05:37:19:INFO:*****************test_verify_hompage******************
+2025-12-23 05:37:24:INFO:*****************test_click_signup_page******************
+2025-12-23 05:37:30:INFO:*****************test_enter user details******************
+2025-12-23 05:41:35:WARNING:Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='localhost', port=34523): Read timed out. (read timeout=120)")': /session/9c592396348d861c76fb830cfa4e823d
+2025-12-23 05:43:35:WARNING:Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='localhost', port=34523): Read timed out. (read timeout=120)")': /session/9c592396348d861c76fb830cfa4e823d
+2025-12-23 05:45:35:WARNING:Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='localhost', port=34523): Read timed out. (read timeout=120)")': /session/9c592396348d861c76fb830cfa4e823d
