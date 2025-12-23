@@ -3,6 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import Select
+import time
 
 class Register:
     signup_btn = "//a[normalize-space()='Signup / Login']"
@@ -59,6 +60,9 @@ class Register:
         self.wait.until(EC.visibility_of_element_located((By.XPATH,self.mobile_number))).send_keys(number)
     def click_creatbtn(self):
         self.wait.until(EC.visibility_of_element_located((By.XPATH,self.create_btn))).click()
+    def take_screenshot(self, name):
+        timestamp = time.strftime("%Y%m%d_%H%M%S")
+        self.driver.save_screenshot(f"Screenshots/{name}_{timestamp}.png")
 
         
         

@@ -26,8 +26,14 @@ class Testregister:
         self.driver = setup
         self.driver.get(self.url)
         self.logo = self.driver.find_element(By.XPATH,"//img[@alt='Website for automation practice']")
-        assert self.logo.is_displayed(),"test case failed"
-        print("test case passed : logo diaplayed")
+        self.register = Register(self.driver)
+        try:
+            assert self.logo.is_displayed(),"test case failed"
+            print("test case passed : logo diaplayed")
+            self.register.take_screenshot(self.name)
+        except AssertionError:
+            self.register.take_screenshot(self.name)
+            raise
         self.driver.close()
     def test_click_signup(self,setup:webdriver):
         self.logger.info("*****************test_click_signup_page******************")
@@ -36,8 +42,12 @@ class Testregister:
         self.register = Register(self.driver)
         self.register.sign_up1()
         self.verify = self.driver.find_element(By.XPATH,"//h2[normalize-space()='New User Signup!']")
-        assert self.verify.is_displayed(),"signup page is not shown"
-        print("sign up page is displayed succesfully")
+        try:
+            assert self.verify.is_displayed(),"signup page is not shown" 
+            print("sign up page is displayed succesfully")
+        except AssertionError:
+            self.register.take_screenshot(self.name)
+            raise
         email = Read_config.get_random_email()
         self.register.enterNameEmail(self.name,email)
         self.register.click_signup()
