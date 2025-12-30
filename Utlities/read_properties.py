@@ -51,6 +51,13 @@ class Read_config:
     @staticmethod
     def get_mobilenumber():
          return config.get("Register",'mobile_number')
+    @staticmethod
+    def get_email():
+         return config.get("Login",'email')
+    @staticmethod
+    def get_password1():
+         return config.get("Login",'password')
+    
     ##password = Testing@123'''
 '''stname = tuka Ram bhide
 Last_name =  bhide
