@@ -57,6 +57,14 @@ class Read_config:
     @staticmethod
     def get_password1():
          return config.get("Login",'password')
+    @staticmethod
+    def get_subject():
+         return config.get("Contact",'subject')
+    def get_message():
+         return config.get("Contact",'message')
+    def get_file():
+         return config.get("Contact",'file')
+    
     
     ##password = Testing@123'''
 '''stname = tuka Ram bhide
