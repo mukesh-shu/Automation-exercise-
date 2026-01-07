@@ -142,3 +142,44 @@
 2026-01-06 04:53:41:INFO:*****************test_verify_hompage******************
 2026-01-06 04:54:22:INFO:*****************test_verify_hompage******************
 2026-01-06 05:28:31:INFO:*****************test_verify_hompage******************
+2026-01-07 03:34:52:INFO:*****************test_verify_cart_page******************
+2026-01-07 03:34:56:INFO:*****************test_verify_cart_page******************
+2026-01-07 03:37:48:INFO:*****************test_verify_cart_page******************
+2026-01-07 03:37:55:INFO:*****************test_verify_cart_page******************
+2026-01-07 03:37:57:INFO:*****************test_verify_cart_page******************
+2026-01-07 03:37:58:INFO:*****************test_verify_cart_page******************
+2026-01-07 03:40:14:INFO:*****************test_verify_cart_page******************
+2026-01-07 03:40:18:INFO:*****************test_verify_cart_page******************
+2026-01-07 03:40:28:WARNING:Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f2d3bb69280>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2ab4a9970988fc8d8974e3679bbf94aa
+2026-01-07 03:40:28:WARNING:Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f2d3bb69430>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2ab4a9970988fc8d8974e3679bbf94aa
+2026-01-07 03:40:28:WARNING:Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f2d3bb69580>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2ab4a9970988fc8d8974e3679bbf94aa
+2026-01-07 03:40:39:INFO:*****************test_verify_cart_page******************
+2026-01-07 03:40:43:INFO:*****************test_verify_cart_page******************
+2026-01-07 03:41:45:INFO:*****************test_verify_cart_page******************
+2026-01-07 03:42:25:INFO:*****************test_verify_cart_page******************
+2026-01-07 03:42:29:INFO:*****************test_verify_cart_page******************
+2026-01-07 03:43:06:INFO:*****************test_verify_cart_page******************
+2026-01-07 03:43:18:INFO:*****************test_verify_cart_page******************
+2026-01-07 03:43:20:INFO:*****************test_verify_cart_page******************
+2026-01-07 03:43:21:INFO:*****************test_verify_cart_page******************
+2026-01-07 03:44:52:INFO:*****************test_verify_cart_page******************
+2026-01-07 03:45:02:INFO:*****************test_verify_cart_page******************
+2026-01-07 03:45:04:INFO:*****************test_verify_cart_page******************
+2026-01-07 03:45:07:INFO:*****************test_verify_cart_page******************
+2026-01-07 03:45:07:INFO:*****************test_verify_cart_page******************
+2026-01-07 03:46:26:INFO:*****************test_verify_cart_page******************
+2026-01-07 03:46:34:INFO:*****************test_verify_cart_page******************
+2026-01-07 03:46:46:INFO:*****************test_verify_cart_page******************
+2026-01-07 03:46:58:INFO:*****************test_verify_cart_page******************
+2026-01-07 03:47:00:INFO:*****************test_verify_cart_page******************
+2026-01-07 03:47:01:INFO:*****************test_verify_cart_page******************
+2026-01-07 03:50:11:INFO:*****************test_verify_cart_page******************
+2026-01-07 03:50:22:INFO:*****************test_verify_cart_page******************
+2026-01-07 03:50:24:INFO:*****************test_verify_cart_page******************
+2026-01-07 03:50:26:INFO:*****************test_verify_cart_page******************
+2026-01-07 03:50:26:INFO:*****************test_verify_cart_page******************
+2026-01-07 03:54:00:INFO:*****************test_home_page******************
+2026-01-07 03:54:10:INFO:*****************test_verify_click_products******************
+2026-01-07 03:54:12:INFO:*****************test_verify_add to cart******************
+2026-01-07 03:54:14:INFO:*****************test_verify_view_cart_page******************
+2026-01-07 03:54:14:INFO:*****************test_verify_cart_items******************
