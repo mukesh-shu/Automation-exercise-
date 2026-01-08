@@ -46,6 +46,9 @@ class Read_config:
     def get_state():
          return config.get("Register",'state')
     @staticmethod
+    def get_city():
+         return config.get("Register","city")
+    @staticmethod
     def get_Zipcode():
          return config.get("Register",'Zipcode')
     @staticmethod
@@ -60,11 +63,29 @@ class Read_config:
     @staticmethod
     def get_subject():
          return config.get("Contact",'subject')
+    @staticmethod
     def get_message():
          return config.get("Contact",'message')
+    @staticmethod
     def get_file():
          return config.get("Contact",'file')
+    @staticmethod
+    def get_text_area():
+         return config.get("Checkout",'key')
+    @staticmethod
+    def get_cnumber():
+         return config.get("Checkout",'c_number')
+    @staticmethod
+    def get_cvv():
+         return config.get("Checkout",'cvv')
+    @staticmethod
+    def get_expiry_month():
+         return config.get("Checkout",'expmonth')
+    @staticmethod
+    def get_expiry_year():
+         return config.get("Checkout",'expyear')
     
+
     
     ##password = Testing@123'''
 '''stname = tuka Ram bhide

@@ -23,6 +23,7 @@ class Register:
     Address1 = "//input[@id='address1']"
     Address2 = "//input[@id='address2']"
     country = "//select[@id='country']"
+    cit = "//input[@id='city']"
     State = "//input[@id='state']"
     Zipcode = "//input[@id='zipcode']"
     mobile_number = "//input[@id='mobile_number']"
@@ -48,7 +49,7 @@ class Register:
     def check_box(self):
         self.wait.until(EC.visibility_of_element_located((By.XPATH,self.newsletter))).click()
         self.wait.until(EC.visibility_of_element_located((By.XPATH,self.offer))).click()
-    def Enter_personal_info(self,first,last,company,Add1,Add2,state,Zip,number):
+    def Enter_personal_info(self,first,last,company,Add1,Add2,state,city,Zip,number):
         self.wait.until(EC.visibility_of_element_located((By.XPATH, self.firstname))).send_keys(first)
         self.wait.until(EC.visibility_of_element_located((By.XPATH, self.Last_name))).send_keys(last)
         self.wait.until(EC.visibility_of_element_located((By.XPATH, self.Company))).send_keys(company)
@@ -56,10 +57,15 @@ class Register:
         self.wait.until(EC.visibility_of_element_located((By.XPATH, self.Address2))).send_keys(Add2)
         Select(self.wait.until(EC.visibility_of_element_located((By.XPATH,self.country)))).select_by_visible_text("India")
         self.wait.until(EC.visibility_of_element_located((By.XPATH,self.State))).send_keys(state)
+        self.wait.until(EC.visibility_of_element_located((By.XPATH,self.cit))).send_keys(city)
         self.wait.until(EC.visibility_of_element_located((By.XPATH,self.Zipcode))).send_keys(Zip)
         self.wait.until(EC.visibility_of_element_located((By.XPATH,self.mobile_number))).send_keys(number)
     def click_creatbtn(self):
-        self.wait.until(EC.visibility_of_element_located((By.XPATH,self.create_btn))).click()
+        element = self.wait.until(EC.visibility_of_element_located((By.XPATH,self.create_btn)))
+        self.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});",element)
+        element.click()
+
+
     def take_screenshot(self, name):
         timestamp = time.strftime("%Y%m%d_%H%M%S")
         self.driver.save_screenshot(f"Screenshots/{name}_{timestamp}.png")
