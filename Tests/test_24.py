@@ -90,10 +90,6 @@ class Test_success_order:
         self.checkout.click_place_order(self.key)
         self.checkout.enter_card_details(self.name,self.c_number,self.cvv,self.expm,self.expy)
         self.checkout.click_confirm_order()
+        self.checkout.download_invoice()
         self.del_account = Login_correct(self.driver)
         self.del_account.clickdeleteacc()
-        
-        
-
-    
-

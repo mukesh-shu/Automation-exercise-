@@ -7,7 +7,7 @@ from Pages.register import Register
 from Pages.subscription_cart import Sub_cart
 from Utlities.custom_logger import Log_maker
 from Utlities.read_properties import Read_config
-class Test_success_order:
+class Test_success_order2:
     url = Read_config.get_url()
     email = Read_config.get_random_email()
     name = Read_config.get_name()
@@ -44,13 +44,6 @@ class Test_success_order:
     def test_success_order(self,setup:webdriver):
         self.driver = setup
         self.driver.get(self.url)
-        self.cart = Addto_cart(self.driver)
-        self.cart.Hover_add_to_cart()
-        self.cart.click_view_cart()
-        self.cart.verify_cart_items()
-        self.checkout = Checkout(self.driver)
-        self.checkout.click_checkout_btn()
-        self.checkout.click_register_btn()
         self.register = Register(self.driver)
         self.register.sign_up1()
         email = Read_config.get_random_email()
@@ -71,9 +64,13 @@ class Test_success_order:
             self.number
         )
         self.register.click_creatbtn()
+        self.checkout = Checkout(self.driver)
         self.checkout.continue_btnn()
-        self.cart1 = Sub_cart(self.driver)
-        self.cart1.click_cart1()
+        self.cart = Addto_cart(self.driver)
+        self.cart.click_products()
+        self.cart.Hover_add_to_cart()
+        self.cart.click_view_cart()
+        self.cart.verify_cart_items()
         self.checkout.click_checkout_btn()
         delivery_raw = self.driver.find_element(By.XPATH,"//ul[@id='address_delivery']").text
         billing_raw = self.driver.find_element(By.XPATH,"//ul[@id='address_invoice']").text
