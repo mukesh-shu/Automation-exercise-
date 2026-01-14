@@ -21,6 +21,7 @@ class Checkout:
     confirm_order = "//b[normalize-space()='Order Placed!']"
     continue_btn = "//a[normalize-space()='Continue']"
     row ="//div[@id='cart_info']//tr[td]"
+    download_invoice = "//a[normalize-space()='Download Invoice']"
 
     Total_amount = "//tbody/tr/td[4]/p[1]"
     def __init__(self,driver):
@@ -46,7 +47,12 @@ class Checkout:
         self.wait.until(EC.visibility_of_element_located((By.XPATH,self.expiry_date))).send_keys(expm)
         self.wait.until(EC.visibility_of_element_located((By.XPATH,self.expiry_year))).send_keys(expy)
     def click_confirm_order(self):
-        self.wait.until(EC.visibility_of_element_located((By.XPATH,self.pay_confirm_order))).click()
+        success_order = self.wait.until(EC.visibility_of_element_located((By.XPATH,self.pay_confirm_order)))
+        self.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});",success_order)
+        success_order.click()
+        invoice = self.wait.until(EC.visibility_of_element_located((By.XPATH,self.download_invoice)))
+        self.driver.execute_script("argu,ments[0].scrollIntoView({block: 'center'});",invoice)
+        invoice.click()
         confirm_order = self.wait.until(EC.visibility_of_element_located((By.XPATH,self.confirm_order)))
         assert confirm_order.is_displayed(),"order is not placed"
         print("order placed succesfully")
@@ -89,7 +95,9 @@ class Checkout:
         print(f"Total amount verified successfully: Rs. {Total}")
 
     def continue_btnn(self):
-        self.wait.until(EC.element_to_be_clickable((By.XPATH,self.continue_btn))).click()
+       Con_btn =  self.wait.until(EC.element_to_be_clickable((By.XPATH,self.continue_btn)))
+       self.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});",Con_btn)
+       Con_btn.click()
     def take_screenshot(self, name):
         timestamp = time.strftime("%Y%m%d_%H%M%S")
         self.driver.save_screenshot(f"Screenshots/{name}_{timestamp}.png")
