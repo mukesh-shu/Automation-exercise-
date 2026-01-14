@@ -9,7 +9,7 @@ from Utlities.custom_logger import Log_maker
 from Utlities.read_properties import Read_config
 class Test_success_order:
     url = Read_config.get_url()
-    email = Read_config.get_email()
+    email = Read_config.get_random_email()
     name = Read_config.get_name()
     password = Read_config.get_password()
     first = Read_config.get_firstname()

@@ -47,8 +47,9 @@ class Register:
         Select(self.wait.until(EC.visibility_of_element_located((By.XPATH, self.month)))).select_by_visible_text("June")
         Select(self.wait.until(EC.visibility_of_element_located((By.XPATH, self.year)))).select_by_visible_text("2002")
     def check_box(self):
-        self.wait.until(EC.visibility_of_element_located((By.XPATH,self.newsletter))).click()
-        self.wait.until(EC.visibility_of_element_located((By.XPATH,self.offer))).click()
+       check_box1 = self.wait.until(EC.visibility_of_element_located((By.XPATH,self.newsletter)))
+       self.driver.execute_script("arguments[0].scrollIntoView({block:'center'});",check_box1)
+       self.wait.until(EC.visibility_of_element_located((By.XPATH,self.offer))).click()
     def Enter_personal_info(self,first,last,company,Add1,Add2,state,city,Zip,number):
         self.wait.until(EC.visibility_of_element_located((By.XPATH, self.firstname))).send_keys(first)
         self.wait.until(EC.visibility_of_element_located((By.XPATH, self.Last_name))).send_keys(last)
