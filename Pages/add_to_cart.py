@@ -6,8 +6,8 @@ from selenium.webdriver.common.action_chains import ActionChains
 import time
 class Addto_cart:
     products = "//a[@href='/products']"
-    atc_btn1 = "//div[@class='productinfo text-center']/a[@data-product-id='1' and text()='Add to cart']"
-    atc_btn2 = "//div[@class='productinfo text-center']/a[@data-product-id='2' and text()='Add to cart']"
+    atc_btn1 = "//div[@class='productinfo text-center']/a[@data-product-id='33' and text()='Add to cart']"
+    atc_btn2 = "//div[@class='productinfo text-center']/a[@data-product-id='35' and text()='Add to cart']"
     Con_shp_btn = "//button[normalize-space()='Continue Shopping']"
     view_cart = "//u[normalize-space()='View Cart']"
     rows = "//tbody/tr"
